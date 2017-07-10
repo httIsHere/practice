@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>p01</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		.mainView{
+			width: 800px;
+			height: 310px;
+			display: flex;
+			background: #f0f0f0;
+			justify-content: space-between;
+		}
+		.mainView > .leftTitle{
+			height: 310px;
+			width: 200px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.mainView div{display: flex;justify-content: center;align-items: center;background: white;width: 200px;height: 90px;}
+		.mainView > .rightDetail{height: 310;width: 590px;background: #fff;overflow: hidden;}
+		.mainView li{list-style: none;display: flex;justify-content: center;align-items: center;background: white;}
+		.mainView > .leftTitle > li{width: 200px;height: 90px;}
+		.mainView > .rightDetail > li{width: 590px;height: 310px;background: #fff;transition: all 0.5s;}
+		.mainView > .leftTitle > li:hover{width: 210px;}
+		#t1:hover ~ .rightDetail > #d1,#d2,#d3{transform: translateY(0);}
+		#t2:hover ~ .rightDetail > #d1,#d2,#d3{transform: translateY(-310px);}
+		#t3:hover ~ .rightDetail > #d1,#d2,#d3{transform: translateY(-620px);}
+	</style>
+</head>
+<body>
+<div class="mainView">
+	<ul class="leftTitle">
+		<li id="t1">123</li>
+		<li id="t2">456</li>
+		<li id="t3">789</li>
+	</ul>
+<!-- 	<div>123</div>
+	<div>456</div>
+	<div>789</div> -->
+	<ul class="rightDetail">
+		<li id="d1">123</li>
+		<li id="d2">456</li>
+		<li id="d3">789</li>
+	</ul>
+</div>
+</body>
+</html>
